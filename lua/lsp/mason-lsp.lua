@@ -3,7 +3,17 @@ return {
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
 			require("mason-lspconfig").setup {
-				ensure_installed = { "terraformls", "tflint", "dockerls", "docker_compose_language_service", "ansiblels", "ruff", "pylsp", "lua_ls", "yamlls" },
+				ensure_installed = {
+					"terraformls",
+					"tflint",
+					"dockerls",
+					"docker_compose_language_service",
+					"ansiblels",
+					"ruff",
+					"pylsp",
+					"lua_ls",
+					"yamlls",
+					"texlab" },
 				automatic_installation = false,
 			}
 		end,
@@ -24,6 +34,7 @@ return {
 			require('lspconfig').hcl.setup({ capabilities = lsp_capabilities, })
 			require('lspconfig').lua_ls.setup({ capabilities = lsp_capabilities, })
 			require('lspconfig').dockerls.setup({ capabilities = lsp_capabilities, })
+			require('lspconfig').texlab.setup({ capabilities = lsp_capabilities, })
 			require('lspconfig').docker_compose_language_service.setup({ capabilities = lsp_capabilities, })
 			require('lspconfig').ansiblels.setup({
 				capabilities = lsp_capabilities,

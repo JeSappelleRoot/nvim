@@ -35,7 +35,6 @@ require("lazy").setup({
 	},
 	-- Configure any other settings here. See the documentation for more details.
 	-- colorscheme that will be used when installing plugins.
-	install = { colorscheme = { "habamax" } },
 	-- automatically check for plugin updates
 	checker = { enabled = true },
 })
@@ -45,11 +44,13 @@ vim.cmd.colorscheme("zephyr")
 
 vim.opt.mouse = "" -- Disable mouse
 vim.opt.swapfile = false
-
+vim.opt.ttyfast = true
 vim.lsp.set_log_level("off") -- Disable LSP log
 
 vim.opt.scrolloff = 10       -- Add 10 extra lines before scrolling up and down
 
+
+vim.g.vimtex_syntax_conceal_disable = true -- Fix slow scrolling with vimtex plugin
 
 vim.cmd([[autocmd BufRead,BufNewFile *.hcl, set filetype=terraform]])
 vim.cmd([[autocmd BufRead,BufNewFile */ansible/*.yml, set filetype=yaml.ansible]])
