@@ -45,7 +45,7 @@ vim.cmd.colorscheme("zephyr")
 
 vim.opt.mouse = "" -- Disable mouse
 vim.opt.swapfile = false
-
+vim.opt.ttyfast = true
 vim.lsp.set_log_level("off") -- Disable LSP log
 
 vim.opt.scrolloff = 10       -- Add 10 extra lines before scrolling up and down
