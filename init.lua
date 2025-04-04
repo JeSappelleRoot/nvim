@@ -50,8 +50,9 @@ vim.lsp.set_log_level("off") -- Disable LSP log
 vim.opt.scrolloff = 10       -- Add 10 extra lines before scrolling up and down
 
 
+-- Force some NVim diagnostic settings
 vim.diagnostic.config({
-	virtual_text = true,
+	virtual_text = true, -- Force virtual text to get linter warning
 })
 
 vim.g.vimtex_syntax_conceal_disable = true -- Fix slow scrolling with vimtex plugin
