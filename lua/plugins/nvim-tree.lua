@@ -7,6 +7,9 @@ return {
 	},
 	config = function()
 		require("nvim-tree").setup {
+			filters = {
+				enable = false,
+			},
 			view = {
 				width = 50,
 			},
