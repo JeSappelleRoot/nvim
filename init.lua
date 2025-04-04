@@ -50,6 +50,10 @@ vim.lsp.set_log_level("off") -- Disable LSP log
 vim.opt.scrolloff = 10       -- Add 10 extra lines before scrolling up and down
 
 
+vim.diagnostic.config({
+	virtual_text = true,
+})
+
 vim.g.vimtex_syntax_conceal_disable = true -- Fix slow scrolling with vimtex plugin
 
 vim.cmd([[autocmd BufRead,BufNewFile *.hcl, set filetype=terraform]])
