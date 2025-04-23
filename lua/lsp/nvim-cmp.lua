@@ -28,10 +28,15 @@ M.config = function()
 				cmp.config.window.bordered(),
 				winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
 			},
-			documentation = cmp.config.window.bordered(),
+			documentation = {
+				cmp.config.window.bordered(),
+				max_height = 30,
+				max_width = 65,
+			}
 		},
 		formatting = {
 			format = lspkind.cmp_format({
+				ellipsis_char = '...',
 				mode = "symbol_text",
 				menu = ({
 					buffer = "[Buffer]",
