@@ -8,11 +8,13 @@ local M = {
 		"hrsh7th/cmp-cmdline",
 		"saadparwaiz1/cmp_luasnip",
 		"L3MON4D3/LuaSnip",
+		"onsails/lspkind.nvim"
 	},
 }
 
 M.config = function()
 	local cmp = require("cmp")
+	local lspkind = require('lspkind')
 	vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 	cmp.setup({
@@ -27,6 +29,18 @@ M.config = function()
 				winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
 			},
 			documentation = cmp.config.window.bordered(),
+		},
+		formatting = {
+			format = lspkind.cmp_format({
+				mode = "symbol_text",
+				menu = ({
+					buffer = "[Buffer]",
+					nvim_lsp = "[LSP]",
+					luasnip = "[LuaSnip]",
+					nvim_lua = "[Lua]",
+					latex_symbols = "[Latex]",
+				})
+			}),
 		},
 		mapping = cmp.mapping.preset.insert({
 			--["<C-b>"] = cmp.mapping.scroll_docs(-4),
