@@ -7,7 +7,7 @@ return {
 				lua = formatters.lsp,
 				terraform = formatters.lsp,
 				yaml = formatters.lsp,
-				hcl = formatters.shell({ cmd = { "hclfmt", "%" } }),
+				hcl = formatters.lsp,
 			},
 		})
 	end,
