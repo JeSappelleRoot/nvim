@@ -57,7 +57,6 @@ vim.diagnostic.config({
 
 vim.g.vimtex_syntax_conceal_disable = true -- Fix slow scrolling with vimtex plugin
 
-vim.cmd([[autocmd BufRead,BufNewFile *.hcl, set filetype=hcl]])
 vim.cmd([[autocmd BufRead,BufNewFile */ansible/*.yml, set filetype=yaml.ansible]])
 
 local defaults = { noremap = true, silent = true }
