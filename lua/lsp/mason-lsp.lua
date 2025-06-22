@@ -2,20 +2,7 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
-			require("mason-lspconfig").setup {
-				ensure_installed = {
-					"terraformls",
-					"tflint",
-					"dockerls",
-					"docker_compose_language_service",
-					"ansiblels",
-					"ruff",
-					"pylsp",
-					"lua_ls",
-					"yamlls",
-					"texlab" },
-				automatic_installation = false,
-			}
+			require("mason-lspconfig").setup {}
 		end,
 	},
 	{
