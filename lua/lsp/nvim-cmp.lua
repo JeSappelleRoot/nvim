@@ -15,6 +15,7 @@ local M = {
 M.config = function()
 	local cmp = require("cmp")
 	local lspkind = require('lspkind')
+	require('luasnip.loaders.from_vscode').lazy_load()
 	vim.opt.completeopt = { "menu", "menuone", "noselect" }
 
 	cmp.setup({
@@ -56,13 +57,10 @@ M.config = function()
 			["<Tab>"] = cmp.mapping.select_next_item(),
 		}),
 		sources = cmp.config.sources({
-			{ name = "nvim_lsp" },
-			--{ name = "nvim_lua" },
-			{ name = "luasnip" }, -- For luasnip users.
-			-- { name = "orgmode" },
-		}, {
-			{ name = "buffer" },
-			{ name = "path" },
+			{ name = 'path' },
+			{ name = 'nvim_lsp', keyword_length = 1 },
+			{ name = 'buffer',   keyword_length = 3 },
+			{ name = 'luasnip',  keyword_length = 2 },
 		}),
 	})
 
