@@ -43,6 +43,19 @@ return {
 			require('lspconfig').pylsp.setup({
 				capabilities = lsp_capabilities,
 			})
+
+			require("lspconfig").yamlls.setup {
+				settings = {
+					yaml = {
+						schemas = {
+							kubernetes = "k8s-*.yaml",
+							["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
+							["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
+							["http://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
+						},
+					},
+				},
+			}
 		end,
 	},
 
