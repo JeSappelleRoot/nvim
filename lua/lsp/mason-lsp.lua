@@ -4,6 +4,17 @@ return {
 		config = function()
 			require("mason-lspconfig").setup {
 				automatic_enable = false,
+				ensure_installed = {
+					"terraformls",
+					"tflint",
+					"ansiblels",
+					"dockerls",
+					"yamlls",
+					"lua_ls",
+					"textlab",
+					"pylsp",
+					"docker_compose_language_service"
+				},
 			}
 		end,
 	},
