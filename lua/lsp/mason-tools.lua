@@ -7,6 +7,7 @@ return {
 				"hclfmt",
 				"yamlfmt",
 				"ansible-lint",
+				"kube-linter"
 			}
 		})
 	end,

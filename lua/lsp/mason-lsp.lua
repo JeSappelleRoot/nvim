@@ -13,7 +13,7 @@ return {
 					"lua_ls",
 					"textlab",
 					"pylsp",
-					"docker_compose_language_service"
+					"docker_compose_language_service",
 				},
 			}
 		end,
