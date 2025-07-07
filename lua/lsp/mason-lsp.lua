@@ -11,7 +11,7 @@ return {
 					"dockerls",
 					"yamlls",
 					"lua_ls",
-					"textlab",
+					"texlab",
 					"pylsp",
 					"docker_compose_language_service",
 				},
