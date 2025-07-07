@@ -40,7 +40,7 @@ require("lazy").setup({
 })
 
 
-vim.cmd.colorscheme("catppuccin-frappe")
+vim.cmd.colorscheme("duskfox")
 
 vim.opt.mouse = "" -- Disable mouse
 vim.opt.swapfile = false
