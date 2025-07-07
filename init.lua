@@ -40,7 +40,7 @@ require("lazy").setup({
 })
 
 
-vim.cmd.colorscheme("catppuccin-frappe")
+vim.cmd.colorscheme("duskfox")
 
 vim.opt.mouse = "" -- Disable mouse
 vim.opt.swapfile = false
@@ -81,3 +81,10 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
 vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+
+-- Force some filetype based on extensions
+vim.filetype.add({
+	extension = {
+		tf = "terraform"
+	}
+})

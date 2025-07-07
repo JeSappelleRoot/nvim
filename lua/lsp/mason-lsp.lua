@@ -11,9 +11,9 @@ return {
 					"dockerls",
 					"yamlls",
 					"lua_ls",
-					"textlab",
+					"texlab",
 					"pylsp",
-					"docker_compose_language_service"
+					"docker_compose_language_service",
 				},
 			}
 		end,
@@ -40,34 +40,22 @@ return {
 				capabilities = lsp_capabilities,
 				filetypes = { "yaml.ansible" },
 			})
-			--require('lspconfig').ruff.setup({ capabilities = lsp_capabilities, })
 			require('lspconfig').pylsp.setup({
 				capabilities = lsp_capabilities,
 			})
-			--require('lspconfig').yamlls.setup({
-			--	capabilities = lsp_capabilities,
-			--	schemaStore = {
-			--		enable = true,
-			--		url = "https://www.schemastore.org/json",
-			--	},
-			--	settings = {
-			--		yaml = {
-			--			format = { enable = false },
-			--		},
-			--		json = {
-			--			schemas = {
-			--				kubernetes = "globPattern",
-			--				["http://json.schemastore.org/github-workflow"] =
-			--				".github/workflows/*",
-			--				["http://json.schemastore.org/github-action"] =
-			--				".github/action.{yml,yaml}",
-			--				["https://raw.githubusercontent.com/compose-spec/compose-spec/master/schema/compose-spec.json"] =
-			--				"*docker-compose*.{yml,yaml}",
 
-			--			}
-			--		}
-			--	}
-			--})
+			require("lspconfig").yamlls.setup {
+				settings = {
+					yaml = {
+						schemas = {
+							kubernetes = "k8s-*.yaml",
+							["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
+							["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
+							["http://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
+						},
+					},
+				},
+			}
 		end,
 	},
 
