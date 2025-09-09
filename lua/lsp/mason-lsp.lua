@@ -39,8 +39,19 @@ return {
 			-- TFLint configuration
 			vim.lsp.enable("tflint")
 
-			vim.lsp.enable("hcl")
+			-- LuaLS configuration
+			vim.lsp.config["lua_ls"] = {
+				settings = {
+					Lua = {
+						diagnostics = {
+							globals = { "vim" },
+						},
+					},
+				},
+			}
 			vim.lsp.enable("lua_ls")
+
+			vim.lsp.enable("hcl")
 			vim.lsp.enable("dockerls")
 			vim.lsp.enable("texlab")
 			vim.lsp.enable("docker_compose_language_service")
