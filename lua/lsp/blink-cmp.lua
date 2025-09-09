@@ -34,7 +34,24 @@ return {
 		-- Set Neovim command line completion
 		cmdline = {
 			keymap = { preset = "inherit" },
-			completion = { menu = { auto_show = true } },
+			sources = { "cmdline", "buffer" },
+			completion = {
+				list = {
+					selection = {
+						-- When `true`, will automatically select the first item in the completion list
+						preselect = false,
+						-- When `true`, inserts the completion item automatically when selecting it
+						auto_insert = false,
+					},
+				},
+				menu = {
+					auto_show = true,
+				},
+				trigger = {
+					show_on_blocked_trigger_characters = {},
+					show_on_x_blocked_trigger_characters = {},
+				},
+			},
 		},
 
 		appearance = {
