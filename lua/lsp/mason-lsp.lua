@@ -2,7 +2,7 @@ return {
 	{
 		"williamboman/mason-lspconfig.nvim",
 		config = function()
-			require("mason-lspconfig").setup {
+			require("mason-lspconfig").setup({
 				automatic_enable = false,
 				ensure_installed = {
 					"terraformls",
@@ -15,36 +15,39 @@ return {
 					"pylsp",
 					"docker_compose_language_service",
 				},
-			}
+			})
 		end,
 	},
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local lsp_capabilities = require('cmp_nvim_lsp').default_capabilities()
-			require('lspconfig').terraformls.setup({
+			local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
+			vim.lsp.config("*", {
 				capabilities = lsp_capabilities,
+			})
+
+			-- TerraformLS configuration
+			vim.lsp.config["terraformls"] = {
 				init_options = {
 					experimentalFeatures = {
 						prefillRequiredFields = true,
 					},
 				},
-			})
-			require('lspconfig').tflint.setup({ capabilities = lsp_capabilities, })
-			require('lspconfig').hcl.setup({ capabilities = lsp_capabilities, })
-			require('lspconfig').lua_ls.setup({ capabilities = lsp_capabilities, })
-			require('lspconfig').dockerls.setup({ capabilities = lsp_capabilities, })
-			require('lspconfig').texlab.setup({ capabilities = lsp_capabilities, })
-			require('lspconfig').docker_compose_language_service.setup({ capabilities = lsp_capabilities, })
-			require('lspconfig').ansiblels.setup({
-				capabilities = lsp_capabilities,
-				filetypes = { "yaml.ansible" },
-			})
-			require('lspconfig').pylsp.setup({
-				capabilities = lsp_capabilities,
-			})
+			}
+			vim.lsp.enable("terraformls", {})
 
-			require("lspconfig").yamlls.setup {
+			-- TFLint configuration
+			vim.lsp.enable("tflint")
+
+			vim.lsp.enable("hcl")
+			vim.lsp.enable("lua_ls")
+			vim.lsp.enable("dockerls")
+			vim.lsp.enable("texlab")
+			vim.lsp.enable("docker_compose_language_service")
+			vim.lsp.enable("ansiblels")
+			vim.lsp.enable("pylsp")
+
+			vim.lsp.config["yamlls"] = {
 				settings = {
 					yaml = {
 						schemas = {
@@ -56,7 +59,7 @@ return {
 					},
 				},
 			}
+			vim.lsp.enable("yamlls")
 		end,
 	},
-
 }
