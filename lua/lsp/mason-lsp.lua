@@ -50,6 +50,7 @@ return {
 				},
 			}
 			vim.lsp.enable("lua_ls")
+
 			vim.lsp.enable("hcl")
 			vim.lsp.enable("dockerls")
 			vim.lsp.enable("texlab")
