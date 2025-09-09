@@ -21,7 +21,7 @@ return {
 	{
 		"neovim/nvim-lspconfig",
 		config = function()
-			local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
+			local lsp_capabilities = require("blink.cmp").get_lsp_capabilities()
 			vim.lsp.config("*", {
 				capabilities = lsp_capabilities,
 			})
