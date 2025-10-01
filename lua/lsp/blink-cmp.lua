@@ -39,12 +39,13 @@ return {
 			keymap = { preset = "inherit" },
 			sources = { "cmdline", "buffer" },
 			completion = {
+				--ghost_text = { enabled = true },
 				list = {
 					selection = {
 						-- When `true`, will automatically select the first item in the completion list
-						preselect = false,
+						preselect = true,
 						-- When `true`, inserts the completion item automatically when selecting it
-						auto_insert = false,
+						auto_insert = true,
 					},
 				},
 				menu = {
@@ -64,7 +65,10 @@ return {
 		},
 
 		-- (Default) Only show the documentation popup when manually triggered
-		completion = { documentation = { auto_show = true } },
+		completion = {
+			documentation = { auto_show = true },
+			ghost_text = { enabled = true },
+		},
 
 		-- Default list of enabled providers defined so that you can extend it
 		-- elsewhere in your config, without redefining it, due to `opts_extend`
