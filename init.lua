@@ -6,7 +6,7 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 	if vim.v.shell_error ~= 0 then
 		vim.api.nvim_echo({
 			{ "Failed to clone lazy.nvim:\n", "ErrorMsg" },
-			{ out,                            "WarningMsg" },
+			{ out, "WarningMsg" },
 			{ "\nPress any key to exit..." },
 		}, true, {})
 		vim.fn.getchar()
@@ -39,16 +39,14 @@ require("lazy").setup({
 	checker = { enabled = true },
 })
 
-
-vim.cmd.colorscheme("duskfox")
+vim.cmd.colorscheme("onedark_vivid")
 
 vim.opt.mouse = "" -- Disable mouse
 vim.opt.swapfile = false
 vim.opt.ttyfast = true
 vim.lsp.set_log_level("off") -- Disable LSP log
 
-vim.opt.scrolloff = 10       -- Add 10 extra lines before scrolling up and down
-
+vim.opt.scrolloff = 10 -- Add 10 extra lines before scrolling up and down
 
 -- Force some NVim diagnostic settings
 vim.diagnostic.config({
@@ -76,15 +74,15 @@ vim.keymap.set("n", "<leader>8", ":BufferLineGoToBuffer8<CR>", defaults)
 vim.keymap.set("n", "<leader>9", ":BufferLineGoToBuffer9<CR>", defaults)
 
 -- Telescope shortcuts
-local builtin = require('telescope.builtin')
-vim.keymap.set('n', '<leader>ff', builtin.find_files, {})
-vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
-vim.keymap.set('n', '<leader>fb', builtin.buffers, {})
-vim.keymap.set('n', '<leader>fh', builtin.help_tags, {})
+local builtin = require("telescope.builtin")
+vim.keymap.set("n", "<leader>ff", builtin.find_files, {})
+vim.keymap.set("n", "<leader>fg", builtin.live_grep, {})
+vim.keymap.set("n", "<leader>fb", builtin.buffers, {})
+vim.keymap.set("n", "<leader>fh", builtin.help_tags, {})
 
 -- Force some filetype based on extensions
 vim.filetype.add({
 	extension = {
-		tf = "terraform"
-	}
+		tf = "terraform",
+	},
 })
