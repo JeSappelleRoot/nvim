@@ -39,7 +39,7 @@ require("lazy").setup({
 	checker = { enabled = true },
 })
 
-vim.cmd.colorscheme("tokyonight-night")
+vim.cmd.colorscheme("tokyonight-moon")
 
 vim.opt.mouse = "" -- Disable mouse
 vim.opt.swapfile = false
