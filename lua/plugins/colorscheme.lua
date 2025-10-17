@@ -18,7 +18,7 @@ return {
 
 	{
 		"uloco/bluloco.nvim",
-		dependencies = { 'rktjmp/lush.nvim' },
+		dependencies = { "rktjmp/lush.nvim" },
 		lazy = false,
 		priority = 1000,
 	},
@@ -31,12 +31,14 @@ return {
 		"catppuccin/nvim",
 		lazy = false,
 		name = "catppuccin",
-		priority = 1000
+		priority = 1000,
 	},
 	{
 		"EdenEast/nightfox.nvim",
-		priority = 1000
-	}
-
-
+		priority = 1000,
+	},
+	{
+		"olimorris/onedarkpro.nvim",
+		priority = 1000,
+	},
 }
