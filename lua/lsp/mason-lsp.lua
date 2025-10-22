@@ -9,6 +9,7 @@ return {
 					"tflint",
 					"ansiblels",
 					"dockerls",
+					"helm_ls",
 					"yamlls",
 					"lua_ls",
 					"texlab",
@@ -58,11 +59,14 @@ return {
 			vim.lsp.enable("ansiblels")
 			vim.lsp.enable("pylsp")
 
+			-- Helm LS
+			vim.lsp.enable("helm_ls")
+
 			vim.lsp.config["yamlls"] = {
 				settings = {
 					yaml = {
 						schemas = {
-							kubernetes = "k8s-*.yaml",
+							kubernetes = "*.yaml",
 							["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
 							["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
 							["http://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
