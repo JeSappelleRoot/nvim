@@ -9,6 +9,7 @@ return {
 					"tflint",
 					"ansiblels",
 					"dockerls",
+					"helm_ls",
 					"yamlls",
 					"lua_ls",
 					"texlab",
@@ -57,6 +58,9 @@ return {
 			vim.lsp.enable("docker_compose_language_service")
 			vim.lsp.enable("ansiblels")
 			vim.lsp.enable("pylsp")
+
+			-- Helm LS
+			vim.lsp.enable("helm_ls")
 
 			vim.lsp.config["yamlls"] = {
 				settings = {
