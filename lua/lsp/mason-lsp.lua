@@ -15,6 +15,7 @@ return {
 					"texlab",
 					"pylsp",
 					"docker_compose_language_service",
+					"jsonls",
 				},
 			})
 		end,
@@ -58,6 +59,7 @@ return {
 			vim.lsp.enable("docker_compose_language_service")
 			vim.lsp.enable("ansiblels")
 			vim.lsp.enable("pylsp")
+			vim.lsp.enable("jsonls")
 
 			-- Helm LS
 			vim.lsp.enable("helm_ls")
