@@ -86,3 +86,7 @@ vim.filetype.add({
 		tf = "terraform",
 	},
 })
+
+-- Auto set indent on JSON file
+
+vim.cmd([[autocmd FileType json setlocal tabstop=2]])
