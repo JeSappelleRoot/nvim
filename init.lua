@@ -48,6 +48,8 @@ vim.lsp.set_log_level("off") -- Disable LSP log
 
 vim.opt.scrolloff = 10 -- Add 10 extra lines before scrolling up and down
 
+vim.opt.laststatus = 3 -- Set laststatus to 3 to get one status bar per window
+
 -- Force some NVim diagnostic settings
 vim.diagnostic.config({
 	virtual_text = true, -- Force virtual text to get linter warning
