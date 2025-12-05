@@ -16,6 +16,7 @@ return {
 					"pylsp",
 					"docker_compose_language_service",
 					"jsonls",
+					"gopls",
 				},
 			})
 		end,
@@ -66,6 +67,20 @@ return {
 			vim.lsp.config["helm-ls"] = {
 				yamlls = {
 					path = "yaml-language-server",
+				},
+			}
+
+			-- Golang LS
+			vim.lsp.enable("gopls")
+			vim.lsp.config["gopls"] = {
+				settings = {
+					gopls = {
+						analyses = {
+							unusedparams = true,
+						},
+					},
+					gofumpt = true,
+					staticcheck = true,
 				},
 			}
 

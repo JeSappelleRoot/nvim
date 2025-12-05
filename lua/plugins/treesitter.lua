@@ -14,6 +14,7 @@ return {
 				"terraform",
 				"hcl",
 				"dockerfile",
+				"go",
 				"helm",
 			},
 			highlight = {
