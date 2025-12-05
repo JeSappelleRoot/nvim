@@ -15,6 +15,7 @@ return {
 				"hcl",
 				"dockerfile",
 				"go",
+				"helm",
 			},
 			highlight = {
 				enable = true,

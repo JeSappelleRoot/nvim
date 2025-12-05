@@ -87,8 +87,15 @@ vim.filetype.add({
 	extension = {
 		tf = "terraform",
 	},
+	pattern = {
+		[".*/templates/.*%yaml"] = "helm",
+		["Chart.yml"] = "helm",
+		["Chart.yaml"] = "helm",
+		--["values.yaml"] = "helm",
+	},
 })
 
 -- Auto set indent on JSON file
 
 vim.cmd([[autocmd FileType json setlocal tabstop=2]])
+vim.cmd([[autocmd FileType helm setlocal tabstop=2 shiftwidth=2]])
