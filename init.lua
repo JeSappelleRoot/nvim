@@ -89,9 +89,10 @@ vim.filetype.add({
 	},
 	pattern = {
 		[".*/templates/.*%yaml"] = "helm",
+		[".*/templates/.*%tpl"] = "helm",
 		["Chart.yml"] = "helm",
 		["Chart.yaml"] = "helm",
-		--["values.yaml"] = "helm",
+		["values.yaml"] = "helm",
 	},
 })
 
