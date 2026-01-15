@@ -4,6 +4,13 @@ return {
 		"folke/tokyonight.nvim",
 		lazy = false, -- make sure we load this during startup if it is your main colorscheme
 		priority = 1000, -- make sure to load this before all the other start plugins
+		config = function()
+			require("tokyonight").setup({
+				on_highlights = function(hl, colors)
+					hl.LineNr = { fg = "#B6BBD2" }
+				end,
+			})
+		end,
 	},
 	{
 		"marko-cerovac/material.nvim",
