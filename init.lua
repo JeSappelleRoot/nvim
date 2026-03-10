@@ -87,13 +87,13 @@ vim.filetype.add({
 	extension = {
 		tf = "terraform",
 	},
-	pattern = {
-		[".*/templates/.*%yaml"] = "helm",
-		[".*/templates/.*%tpl"] = "helm",
-		["Chart.yml"] = "helm",
-		["Chart.yaml"] = "helm",
-		["values.yaml"] = "helm",
-	},
+	--pattern = {
+	--	[".*/templates/.*%yaml"] = "helm",
+	--	[".*/templates/.*%tpl"] = "helm",
+	--	["Chart.yml"] = "helm",
+	--	["Chart.yaml"] = "helm",
+	--	["values.yaml"] = "helm",
+	--},
 })
 
 -- Auto set indent on JSON file
