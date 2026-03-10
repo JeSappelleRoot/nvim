@@ -90,6 +90,7 @@ return {
 						schemas = {
 							["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
 							["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
+							--["http://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
 						},
 					},
 				},
