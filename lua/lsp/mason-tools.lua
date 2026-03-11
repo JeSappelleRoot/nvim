@@ -8,6 +8,7 @@ return {
 				"yamlfmt",
 				"ansible-lint",
 				"kube-linter",
+				"golangci-lint",
 			},
 		})
 	end,
