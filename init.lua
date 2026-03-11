@@ -87,7 +87,6 @@ vim.filetype.add({
 		[".*/templates/.*%tpl"] = "helm",
 		["Chart.yml"] = "helm",
 		["Chart.yaml"] = "helm",
-		--	["values.yaml"] = "helm",
 	},
 })
 
