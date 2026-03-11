@@ -64,7 +64,7 @@ return {
 			vim.lsp.enable("jsonls")
 
 			-- Helm LS
-			--vim.lsp.enable("helm_ls")
+			vim.lsp.enable("helm_ls")
 			--vim.lsp.config["helm-ls"] = {
 			--	yamlls = {
 			--		path = "yaml-language-server",
