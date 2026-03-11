@@ -13,11 +13,11 @@ return {
 				},
 				multilines = {
 					enabled = true,
-					--always_show = true,
+					always_show = true,
 				},
 				break_line = {
-					enabled = false, -- Enable automatic line breaking
-					after = 15, -- Number of characters before inserting a line break
+					enabled = true, -- Enable automatic line breaking
+					after = 30, -- Number of characters before inserting a line break
 				},
 			},
 		})
