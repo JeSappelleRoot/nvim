@@ -2,7 +2,7 @@ return {
 	"nvim-treesitter/nvim-treesitter",
 	config = function()
 		require("nvim-treesitter").setup({
-			install = {
+			ensure_installed = {
 				"yaml",
 				"c",
 				"lua",
