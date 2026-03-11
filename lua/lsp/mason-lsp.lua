@@ -17,6 +17,7 @@ return {
 					"docker_compose_language_service",
 					"jsonls",
 					"gopls",
+					"golangci_lint_ls",
 				},
 			})
 		end,
@@ -64,13 +65,9 @@ return {
 
 			-- Helm LS
 			vim.lsp.enable("helm_ls")
-			vim.lsp.config["helm-ls"] = {
-				yamlls = {
-					path = "yaml-language-server",
-				},
-			}
 
 			-- Golang LS
+			vim.lsp.enable("golangci_lint_ls")
 			vim.lsp.enable("gopls")
 			vim.lsp.config["gopls"] = {
 				settings = {
@@ -90,6 +87,8 @@ return {
 						schemas = {
 							["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
 							["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
+							["http://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
+							["http://json.schemastore.org/chart"] = "templates/*.{yml,yaml}",
 						},
 					},
 				},
