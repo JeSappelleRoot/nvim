@@ -65,11 +65,6 @@ return {
 
 			-- Helm LS
 			vim.lsp.enable("helm_ls")
-			--vim.lsp.config["helm-ls"] = {
-			--	yamlls = {
-			--		path = "yaml-language-server",
-			--	},
-			--}
 
 			-- Golang LS
 			vim.lsp.enable("golangci_lint_ls")
