@@ -84,6 +84,10 @@ return {
 			vim.lsp.config["yamlls"] = {
 				settings = {
 					yaml = {
+						format = {
+							enable = false,
+							singleQuote = true,
+						},
 						schemas = {
 							["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
 							["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
