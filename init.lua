@@ -102,3 +102,6 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.treesitter.start()
 	end,
 })
+
+-- Set new shortcut to quit terminal mode
+vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
