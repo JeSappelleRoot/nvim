@@ -1,8 +1,40 @@
 {
   "plugins": {
+    "bluloco.nvim": {
+      "rev": "4daabf6a9e6b9ecdcb19e7c78e888be0bacd866c",
+      "src": "https://github.com/uloco/bluloco.nvim"
+    },
+    "kanagawa.nvim": {
+      "rev": "8ad3b4cdcc804b332c32db8f9743667e1bb82b99",
+      "src": "https://github.com/rebelot/kanagawa.nvim"
+    },
+    "lush.nvim": {
+      "rev": "9c60ec2279d62487d942ce095e49006af28eed6e",
+      "src": "https://github.com/rktjmp/lush.nvim"
+    },
+    "material.nvim": {
+      "rev": "92f7366a9315cd386bc4fa4d716fde375dda210f",
+      "src": "https://github.com/marko-cerovac/material.nvim"
+    },
+    "nightfox.nvim": {
+      "rev": "26b61b1f856ec37cae3cb64f5690adb955f246a1",
+      "src": "https://github.com/EdenEast/nightfox.nvim"
+    },
+    "nvim": {
+      "rev": "426dbebe06b5c69fd846ceb17b42e12f890aedf1",
+      "src": "https://github.com/catppuccin/nvim"
+    },
+    "nvim-tree.lua": {
+      "rev": "f9bfc0059eca24546b69a7006110463da4808f8f",
+      "src": "https://github.com/nvim-tree/nvim-tree.lua.git"
+    },
     "nvim-web-devicons": {
       "rev": "4fc505ac7bd7692824a142e96e5f529c133862f8",
       "src": "https://github.com/nvim-tree/nvim-web-devicons"
+    },
+    "onedarkpro.nvim": {
+      "rev": "f5fddfd5122fe00421e199151ae4fe8571a02898",
+      "src": "https://github.com/olimorris/onedarkpro.nvim"
     },
     "snacks.nvim": {
       "rev": "ad9ede6a9cddf16cedbd31b8932d6dcdee9b716e",
@@ -11,6 +43,10 @@
     "tokyonight.nvim": {
       "rev": "cdc07ac78467a233fd62c493de29a17e0cf2b2b6",
       "src": "https://github.com/folke/tokyonight.nvim.git"
+    },
+    "zephyr-nvim": {
+      "rev": "7fd86b7164442d3b5ec2c81b2694d040e716b5cf",
+      "src": "https://github.com/nvimdev/zephyr-nvim"
     }
   }
 }

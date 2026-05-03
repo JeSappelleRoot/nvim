@@ -1,5 +1,7 @@
 local opt = vim.opt
-opt.number = true 
+
+
+opt.number = true -- Show line number
 
 -- Indentation
 opt.tabstop = 2 -- Tab width
