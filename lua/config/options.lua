@@ -1,6 +1,8 @@
 local opt = vim.opt
 
-opt.number = true -- Show line number
+vim.opt.mouse = "" -- Disable mouse
+
+vim.g.vimtex_syntax_conceal_disable = true -- Fix slow scrolling with vimtex plugin
 
 -- Indentation
 opt.tabstop = 2 -- Tab width
@@ -17,6 +19,7 @@ opt.hlsearch = false -- Don't highlight search results
 opt.incsearch = true -- Show matches as you type
 
 -- Visual settings
+opt.number = true -- Show line number
 opt.termguicolors = true -- Enable 24-bit colors
 opt.signcolumn = "yes" -- Always show sign column
 opt.showmatch = true -- Highlight matching brackets
@@ -34,6 +37,8 @@ opt.synmaxcol = 300 -- Syntax highlighting limit
 opt.ruler = false -- Disable the default ruler
 opt.virtualedit = "block" -- Allow cursor to move where there is no text in visual block mode
 opt.winminwidth = 5 -- Minimum window width
+opt.scrolloff = 10 -- Add 10 extra lines before scrolling up and down
+opt.laststatus = 3 -- Set laststatus to 3 to get one status bar per window
 
 -- File handling
 opt.backup = false -- Don't create backup files
@@ -49,6 +54,7 @@ opt.autoread = true -- Auto reload files changed outside vim
 opt.autowrite = true -- Auto save
 
 -- Behavior settings
+vim.opt.ttyfast = true -- Fast TTY to fix latency
 opt.backspace = "indent,eol,start" -- Better backspace behavior
 opt.autochdir = true -- Don't auto change directory
 opt.iskeyword:append("-") -- Treat dash as part of word
