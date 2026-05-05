@@ -4,6 +4,9 @@ vim.opt.mouse = "" -- Disable mouse
 
 vim.g.vimtex_syntax_conceal_disable = true -- Fix slow scrolling with vimtex plugin
 
+-- Diagnostics settings
+vim.diagnostic.config({ virtual_text = false }) -- Disable Neovim's default virtual text diagnostics
+
 -- Indentation
 opt.tabstop = 2 -- Tab width
 opt.shiftwidth = 2 -- Indent width
