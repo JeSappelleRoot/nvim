@@ -1,5 +1,5 @@
 vim.o.autocomplete = true
-vim.lsp.set_log_level("off") -- Disable LSP log
+vim.lsp.log.set_level("off")
 
 require("lsp.mason")
 require("lsp.mason-lsp")
