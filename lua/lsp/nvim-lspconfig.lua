@@ -39,7 +39,21 @@ vim.lsp.enable("dockerls")
 vim.lsp.enable("texlab")
 vim.lsp.enable("docker_compose_language_service")
 vim.lsp.enable("ansiblels")
+
+-- Python LSP
 vim.lsp.enable("pylsp")
+vim.lsp.config["pylsp"] = {
+	settings = {
+		pylsp = {
+			plugins = {
+				pycodestyle = {
+					ignore = { "E501" },
+				},
+			},
+		},
+	},
+}
+
 vim.lsp.enable("jsonls")
 
 -- Helm LS
