@@ -8,6 +8,7 @@ vim.pack.add({
 	"https://github.com/hrsh7th/cmp-cmdline",
 	"https://github.com/saadparwaiz1/cmp_luasnip",
 	"https://github.com/L3MON4D3/LuaSnip",
+	"https://github.com/rafamadriz/friendly-snippets",
 	"https://github.com/onsails/lspkind.nvim",
 })
 
@@ -22,17 +23,7 @@ Cmp.setup({
 			require("luasnip").lsp_expand(args.body) -- For `luasnip`
 		end,
 	},
-	window = {
-		completion = {
-			Cmp.config.window.bordered(),
-			winhighlight = "Normal:Pmenu,FloatBorder:Pmenu,Search:None",
-		},
-		documentation = {
-			Cmp.config.window.bordered(),
-			max_height = 30,
-			max_width = 65,
-		},
-	},
+
 	formatting = {
 		format = Lspkind.cmp_format({
 			ellipsis_char = "...",
