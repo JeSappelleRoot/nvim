@@ -47,7 +47,10 @@ vim.lsp.config["pylsp"] = {
 		pylsp = {
 			plugins = {
 				pycodestyle = {
-					ignore = { "E501" },
+					ignore = {
+						"E501",
+						"E402",
+					},
 				},
 			},
 		},
