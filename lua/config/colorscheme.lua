@@ -11,4 +11,11 @@ vim.pack.add({
 	"https://github.com/rktjmp/lush.nvim",
 })
 
+local Theme = require("tokyonight")
+Theme.setup({
+	on_colors = function(colors)
+		colors.fg_gutter = "#b2b8cf"
+	end,
+})
+
 vim.cmd.colorscheme("tokyonight-moon")
