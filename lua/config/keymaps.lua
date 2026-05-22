@@ -23,3 +23,7 @@ vim.keymap.set("n", "<leader>9", ":BufferLineGoToBuffer9<CR>", defaults)
 
 -- Set new shortcut to quit terminal mode
 vim.keymap.set("t", "<Esc>", "<C-\\><C-n>")
+
+-- Extra shortcut to move at the begining of the end of the line
+vim.keymap.set({ "n", "v", "o" }, "H", "^", { desc = "Beginig of the line (non-blank)" })
+vim.keymap.set({ "n", "v", "o" }, "L", "$", { desc = "End of the line" })
