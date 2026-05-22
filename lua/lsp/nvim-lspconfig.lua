@@ -1,0 +1,96 @@
+vim.pack.add({
+	"https://github.com/neovim/nvim-lspconfig",
+	-- Dependencies
+	"https://github.com/hrsh7th/cmp-nvim-lsp",
+})
+
+local lsp_capabilities = require("cmp_nvim_lsp").default_capabilities()
+vim.lsp.config("*", {
+	capabilities = lsp_capabilities,
+})
+
+-- TerraformLS configuration
+vim.lsp.config["terraformls"] = {
+	init_options = {
+		experimentalFeatures = {
+			prefillRequiredFields = true,
+		},
+	},
+}
+vim.lsp.enable("terraformls", {})
+
+-- TFLint configuration
+vim.lsp.enable("tflint")
+
+-- LuaLS configuration
+vim.lsp.config["lua_ls"] = {
+	settings = {
+		Lua = {
+			diagnostics = {
+				globals = { "vim" },
+			},
+		},
+	},
+}
+vim.lsp.enable("lua_ls")
+
+vim.lsp.enable("hcl")
+vim.lsp.enable("dockerls")
+vim.lsp.enable("texlab")
+vim.lsp.enable("docker_compose_language_service")
+vim.lsp.enable("ansiblels")
+
+-- Python LSP
+vim.lsp.enable("pylsp")
+vim.lsp.config["pylsp"] = {
+	settings = {
+		pylsp = {
+			plugins = {
+				pycodestyle = {
+					ignore = {
+						"E501",
+						"E402",
+					},
+				},
+			},
+		},
+	},
+}
+
+vim.lsp.enable("jsonls")
+
+-- Helm LS
+vim.lsp.enable("helm_ls")
+
+-- Golang LS
+vim.lsp.enable("golangci_lint_ls")
+vim.lsp.enable("gopls")
+vim.lsp.config["gopls"] = {
+	settings = {
+		gopls = {
+			analyses = {
+				unusedparams = true,
+			},
+		},
+		gofumpt = true,
+		staticcheck = true,
+	},
+}
+
+vim.lsp.config["yamlls"] = {
+	settings = {
+		yaml = {
+			format = {
+				enable = false,
+				singleQuote = true,
+			},
+			schemas = {
+				["http://json.schemastore.org/github-workflow"] = ".github/workflows/*",
+				["http://json.schemastore.org/github-action"] = ".github/action.{yml,yaml}",
+				["http://json.schemastore.org/chart"] = "Chart.{yml,yaml}",
+				["http://json.schemastore.org/chart"] = "templates/*.{yml,yaml}",
+			},
+		},
+	},
+}
+vim.lsp.enable("yamlls")

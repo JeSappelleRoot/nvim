@@ -1,8 +1,4 @@
-return {
-	
-    "williamboman/mason.nvim",
-	config = function()
-		require("mason").setup()
-	end,
-}
+vim.pack.add({ "https://github.com/williamboman/mason.nvim" })
 
+local Mason = require("mason")
+Mason.setup()
