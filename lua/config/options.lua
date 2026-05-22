@@ -61,7 +61,7 @@ opt.backspace = "indent,eol,start" -- Better backspace behavior
 opt.autochdir = true -- Don't auto change directory
 opt.iskeyword:append("-") -- Treat dash as part of word
 opt.path:append("**") -- include subdirectories in search
-opt.selection = "exclusive" -- Selection behavior
+opt.selection = "inclusive" -- Selection behavior
 opt.clipboard = vim.env.SSH_TTY and "" or "unnamedplus" -- Sync with system clipboard
 opt.modifiable = true -- Allow buffer modifications
 opt.encoding = "UTF-8" -- Set encoding
