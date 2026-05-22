@@ -68,5 +68,6 @@ opt.encoding = "UTF-8" -- Set encoding
 
 -- Command-line completion
 opt.wildmenu = true
-opt.wildmode = "longest:full,full"
+opt.wildmode = "noselect:full"
+opt.wildoptions = "pum,fuzzy,tagfile"
 opt.wildignore:append({ "*.o", "*.obj", "*.pyc", "*.class", "*.jar" })
