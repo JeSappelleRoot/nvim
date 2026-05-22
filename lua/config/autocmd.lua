@@ -12,3 +12,18 @@ vim.api.nvim_create_autocmd("FileType", {
 
 -- Ansible fix to set filetype
 vim.cmd([[autocmd BufRead,BufNewFile */ansible/*.yml, set filetype=yaml.ansible]])
+
+-- Auto-open command-line completion menu while typing `:` commands
+vim.api.nvim_create_autocmd("CmdlineChanged", {
+	group = vim.api.nvim_create_augroup("cmdline_autocomplete", { clear = true }),
+	pattern = ":",
+	callback = function()
+		if vim.fn.getcmdline() == "" then
+			return
+		end
+		if vim.fn.pumvisible() == 1 or vim.fn.wildmenumode() == 1 then
+			return
+		end
+		vim.fn.wildtrigger()
+	end,
+})
